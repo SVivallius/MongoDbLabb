@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "HBBkFxyfc2quqkj+Qpr65n2xd8qg3DHbimTK35548qAQe12Xr7yFQ4mKz7CEEa+kDFDcGpLR+pas4KZQ0NpD3Q==",
+  "success": true,
+  "projectFilePath": "C:\\00 - Programmering\\SQL Databas och API\\Övning\\MongoDb\\MongoDb.Common\\MongoDb.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\varul\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\mongodb.bson\\2.18.0\\mongodb.bson.2.18.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\mongodb.driver.core\\2.18.0\\mongodb.driver.core.2.18.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\mongodb.libmongocrypt\\1.6.0\\mongodb.libmongocrypt.1.6.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\varul\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

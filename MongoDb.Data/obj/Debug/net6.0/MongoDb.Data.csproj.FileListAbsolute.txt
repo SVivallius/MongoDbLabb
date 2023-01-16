@@ -1,0 +1,15 @@
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\bin\Debug\net6.0\MongoDb.Data.deps.json
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\bin\Debug\net6.0\MongoDb.Data.dll
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\bin\Debug\net6.0\MongoDb.Data.pdb
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\bin\Debug\net6.0\MongoDb.Common.dll
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\bin\Debug\net6.0\MongoDb.Common.pdb
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.csproj.AssemblyReference.cache
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.AssemblyInfoInputs.cache
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.AssemblyInfo.cs
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.csproj.CoreCompileInputs.cache
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.csproj.CopyComplete
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.dll
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\refint\MongoDb.Data.dll
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\MongoDb.Data.pdb
+C:\00 - Programmering\SQL Databas och API\Övning\MongoDb\MongoDb.Data\obj\Debug\net6.0\ref\MongoDb.Data.dll
