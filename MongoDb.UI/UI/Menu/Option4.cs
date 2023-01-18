@@ -17,7 +17,7 @@ public static class Option4
         switch (selection)
         {
             case 1:
-                Console.Write("\tPlease enter item ID." +
+                Console.Write("\tPlease enter item ID.\n" +
                     "\tLeave empty to cancel: ");
                 string itemID = Console.ReadLine();
 
@@ -27,7 +27,7 @@ public static class Option4
                     break;
                 }
 
-                string findItem = await db.ReadOneAsync("Id", itemID);
+                string findItem = await db.ReadOneAsync("_id", itemID);
                 if (findItem == null)
                 {
                     Console.WriteLine("\tItem with that ID not found. Returning to main menu.");
@@ -35,7 +35,7 @@ public static class Option4
                 }
 
                 Console.WriteLine("\t" + findItem);
-                Console.Write("\tDelete this item? (Y/N): ");
+                Console.Write("\n\tDelete this item? (Y/N): ");
 
                 bool validSelect = false;
                 string input = "";

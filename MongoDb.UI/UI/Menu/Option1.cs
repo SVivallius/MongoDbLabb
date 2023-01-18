@@ -17,8 +17,16 @@ public static class Option1
         switch (selection)
         {
             case 1:
-                Console.Write("\tItem type: ");
-                string name = Console.ReadLine();
+                string name;
+                do
+                {
+                    Console.Write("\tItem type: ");
+                    name = Console.ReadLine();
+
+                    if (name == null || name == String.Empty || name == "")
+                            Console.WriteLine("\tInput can not be empty! Try again.");
+                }
+                while (name == null || name == String.Empty || name == "");
 
                 bool parsedPrice = false;
                 float price;
@@ -30,8 +38,17 @@ public static class Option1
                 }
                 while (!parsedPrice);
 
-                Console.Write("\tItem Description: ");
-                string description = Console.ReadLine();
+
+                string description;
+                do
+                {
+                    Console.Write("\tItem Description: ");
+                    description = Console.ReadLine();
+
+                    if (description == null || description == String.Empty || description == "")
+                        Console.WriteLine("\tInput can not be empty! Try again.");
+                }
+                while (description == null || description == String.Empty || description == "");
 
                 Item input = new Item(name, price, description);
 

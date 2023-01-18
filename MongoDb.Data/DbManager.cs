@@ -44,27 +44,41 @@ public class DbManager
 	}
 
 	// (R)ead
-	public async Task<String> ReadOneAsync(string type, string name)
+	public async Task<String> ReadOneAsync(string field, string name)
 	{
-        var filter = Builders<BsonDocument>.Filter.Eq(type, name);
-		//var filter = Builders<Item>.Filter.Eq(name, type);
-		var result = await _collection.FindAsync(filter);
+		FilterDefinition<BsonDocument> filter;
 
-		if (result == null) return "Could not find specified entry.";
-
-		string fromBson = "";
-		foreach (var item in result.ToEnumerable())
+		if (field == "_id")
 		{
-			fromBson += "\t" + item.ToString() + "\n";
-		}
+            var idDefiner = new ObjectId(name);
+            filter = Builders<BsonDocument>.Filter.Eq("_id", idDefiner);
+        }
+		else
+		{
+            filter = Builders<BsonDocument>.Filter.Eq(field, name);
+        }
 
-		return fromBson;
+        var rawResult = await _collection.Find(filter).FirstOrDefaultAsync();
+        if (rawResult == null) { return null; }
+
+        string result = rawResult.ToString();
+        return result;
+    }
+
+	// (R)ead all
+	public async Task<List<string>> GetAllAsync()
+	{
+		var entries = await _collection.FindAsync(new BsonDocument());
+		var stringed = await entries.ToListAsync();
+
+		return stringed.Select(e => e.ToString()).ToList();
 	}
 
 	// (U)pdate
 	public async Task<bool> UpdateAsync(Item item, string id)
 	{
-        var filter = Builders<BsonDocument>.Filter.Eq("Id", id);
+		var itemId = new ObjectId(id);
+        var filter = Builders<BsonDocument>.Filter.Eq("_id", itemId);
         //var filter = Builders<Item>.Filter.Eq("Id", id);
         var result = await _collection.FindAsync(filter);
 
@@ -76,14 +90,16 @@ public class DbManager
 		}
 		var bson = item.ToBsonDocument();
 
-		var updateResult = await _collection.UpdateOneAsync(filter, bson);
+		var updateResult = await _collection.ReplaceOneAsync(filter, bson);
 		return updateResult.ModifiedCount == 1;
 	}
 
 	// (D)elete
 	public async Task<bool> DeleteAsync(string id)
 	{
-        var filter = Builders<BsonDocument>.Filter.Eq("Id", id);
+
+		var itemId = new ObjectId(id);
+        var filter = Builders<BsonDocument>.Filter.Eq("_id", itemId);
         //var filter = Builders<Item>.Filter.Eq("Id", id);
         var checkEntry = await _collection.FindAsync(filter);
 		

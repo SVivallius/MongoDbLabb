@@ -26,7 +26,7 @@ while (running)
 
         case 2:
             Option2.Build();
-            await Option2.Selection(db);
+            await Option2.SelectAsync(db);
             InputManager.Confirm();
             break;
 

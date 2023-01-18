@@ -20,12 +20,18 @@ namespace MongoDb.UI.UI.Menu
             {
                 case 1:
                     Console.Clear();
-                    Console.Write("\tPlease enter ID: ");
+                    Console.Write("\tPlease enter ID. Leave empty to cancel: ");
                     string itemID = Console.ReadLine();
 
-                    string resultID = await db.ReadOneAsync("Id", itemID);
+                    if (itemID == ""|| itemID == null)
+                    {
+                        Console.WriteLine("\tCancelled. Returning to main menu.");
+                        break;
+                    }
+
+                    string resultID = await db.ReadOneAsync("_id", itemID);
                     
-                    if (resultID == null)
+                    if (resultID == "" || resultID == null)
                     {
                         Console.WriteLine("\tItem with specified ID not found. Returning to main menu.");
                         break;

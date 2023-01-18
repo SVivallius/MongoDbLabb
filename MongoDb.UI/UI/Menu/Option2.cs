@@ -7,11 +7,12 @@
             Console.Clear();
             Console.Write("\tReading item data.\n\n" +
                 "\t1) Input item search criteria\n" +
-                "\t2) Cancel\n\n" +
+                "\t2) View all items\n" +
+                "\t3) Cancel\n\n" +
                 "\tPlease select: ");
         }
 
-        public static async Task Selection(DbManager db)
+        public static async Task SelectAsync(DbManager db)
         {
             int selection = InputManager.Selection(2);
             switch (selection)
@@ -21,6 +22,15 @@
                     break;
 
                 case 2:
+                    var items = await db.GetAllAsync();
+                    foreach (var item in items)
+                    {
+                        Console.WriteLine("\t" + item);
+                    }
+                    Console.WriteLine("\n\tOperation complete. Returning to main menu.");
+                    break;
+
+                case 3:
                     Console.Clear();
                     Console.Write("\tReturning to main menu.");
                     break;
@@ -43,7 +53,7 @@
             {
                 case 1:
                     Console.Clear();
-                    Console.Write("\tPlease enter item ID." +
+                    Console.Write("\tPlease enter item ID.\n" +
                         "\tLeave empty to cancel: ");
 
                     string ID = Console.ReadLine();
@@ -54,7 +64,7 @@
                         break;
                     }
 
-                    string idResult = await db.ReadOneAsync("Id", ID);
+                    string idResult = await db.ReadOneAsync("_id", ID);
 
                     if (idResult != null) Console.WriteLine(idResult);
                     else Console.Write("\tEntry not found. Returning to main menu.");
